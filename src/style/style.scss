@@ -1,0 +1,520 @@
+@font-face {
+  font-family: "Manrope-Bold";
+  src: url("../fonts/Manrope-Bold.ttf");
+}
+@font-face {
+  font-family: "Manrope-Regular";
+  src: url("../fonts/Manrope-Regular.ttf");
+}
+@font-face {
+  font-family: "Manrope-SemiBold";
+  src: url("../fonts/Manrope-SemiBold.ttf");
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Manrope-Regular", sans-serif;
+  background: linear-gradient(to right, rgba(240, 243, 245, 1) 0%, rgba(230, 235, 240, 1) 100%);
+}
+
+input {
+  outline: none;
+}
+
+.g-button {
+  border-radius: 10px;
+  background: rgb(53, 134, 255);
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  outline: none;
+  &::after {
+    content: '';
+    width: calc(100% + 6px);
+    height: calc(100% + 6px);
+    border: 1.4px solid rgb(53, 134, 255);
+    position: absolute;
+    left: -4px;
+    top: -4px;
+    border-radius: 10px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+
+img {
+  border-radius: 20px;
+}
+
+.g-title {
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "Monrope-Bold", sans-serif;
+  span {
+    display: block;
+    font-size: 24px;
+    font-weight: 400;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
+.nav {
+  padding: 35px 0;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-brand {
+
+  }
+  &-links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    &-item {
+      font-family: "Monrope-Bold", sans-serif;
+      font-weight: 700;
+      cursor: pointer;
+      text-transform: uppercase;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  &-buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    &-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border-radius: 100%;
+      overflow: hidden;
+      width: 50px;
+      height: 60px;
+    }
+  }
+}
+
+// Стили для секции "Главный экран"
+
+
+.header {
+  margin-top: 50px;
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+  }
+  &-img {
+    width: 621px;
+  }
+  &-title {
+    font-size: 50px;
+    font-weight: bold;
+    font-family: "Monrope-Bold", sans-serif;
+  }
+  &-btn {
+    margin-top: 65px;
+    width: 256px;
+    height: 60px;
+  }
+  &-desc {
+    margin-top: 35px;
+    font-size: 20px;
+  }
+}
+
+// Стили для секции "Курсы"
+
+
+.s-course {
+  margin-top: 150px;
+  width: 100%;
+  text-align: center;
+  &-title {
+    text-align: center;
+  }
+
+  &-wrapper {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    &-item {
+      width: 100%;
+      background: #ffffff;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 0;
+      &-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 10px;
+      }
+    }
+  }
+  &-btn {
+    margin: 70px auto 0;
+    width: 256px;
+    height: 60px;
+  }
+}
+
+// Стили для секции "Пробный курс"
+
+
+.s-free {
+  margin-top: 150px;
+  &-wrapper {
+    height: 500px;
+    border-radius: 20px;
+    padding-left: 120px;
+    box-sizing: border-box;
+    //background: linear-gradient(to right, rgb(217, 218, 222) 0%, rgb(224, 228, 232) 50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("../img/5.jpg") ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  &-title {
+    
+  }
+  &-desc {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 30px;
+    width: 550px;
+  }
+  &-btn {
+    margin-top: 40px;
+    width: 256px;
+    height: 60px;
+  }
+}
+
+// Стили для секции "Услуги"
+
+.s-service {
+  margin-top: 170px;
+  &-wrapper {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+    &-item {
+      flex: 1 1 auto;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &-desc {
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: 500;
+    height: 100%;
+  }
+  &-footer {
+    flex: 0 0 auto;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    &-price {
+      font-weight: 700;
+      font-size: 60px;
+    }
+    &-btn {
+      width: 256px;
+      height: 60px;
+    }
+  }
+  &-container {
+    margin-top: 80px;
+    &-nav {
+      display: flex;
+      gap: 20px;
+      &-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 160px;
+        height: 40px;
+        border-radius: 10px;
+        background: #ffffff;
+        color: #000;
+        font-size: 16px;
+        font-weight: 700;
+        &--active {
+          color: #ffffff;
+          background: rgb(53, 134, 255);
+
+        }
+      }
+    }
+    &-wrapper {
+      margin-top: 50px;
+      display: flex;
+      justify-content: space-between;
+      &-text {
+        width: 260px;
+        font-size: 18px;
+        font-weight: 700;
+      }
+      &-photos {
+        display: flex;
+        grid-template-columns: repeat(3, 260px);
+        gap: 20px;
+        &-item {
+          background: #ffffff;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          padding: 20px 0;
+          width: 260px;
+          border-radius: 10px;
+          &-title {
+            text-align: center;
+            font-weight: 700;
+          }
+          &-desc {
+            text-align: center;
+            font-size: 14px;
+          }
+          &-img {
+            overflow: hidden;
+            height: 180px;
+            width: 100%;
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+            img {
+              height: 240px;
+            }
+          }
+        }
+      }
+    }
+  }
+  &-data {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 30px;
+    &-item {
+      display: flex;
+      justify-content: space-between;
+      font-size: 16px;
+      font-weight: 700;
+      background: #ffffff;
+      padding: 16px 20px;
+      box-sizing: border-box;
+      border-radius: 5px;
+      span {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+      }
+    }
+  }
+}
+
+
+// Стили для секции "О нас"
+
+.s-about {
+  margin-top: 150px;
+  background: rgb(241, 244, 248);
+
+  &-wrapper {
+    padding: 150px 0;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    height: 400px;
+    &-item {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
+    }
+  }
+  &-title {
+
+  }
+  &-desc {
+    margin-top: 40px;
+    height: 100%;
+  }
+  &-btn {
+    flex: 0 0 auto;
+    width: 256px;
+    height: 60px;
+  }
+  &-img {
+    border-radius: 20px;
+  }
+
+}
+
+// Стили для секции "Как это работает"
+
+.s-work {
+  margin-top: 170px;
+  text-align: center;
+  &-wrapper {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    &-item {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      &-id {
+        background: rgb(53, 143, 255);
+        border-radius: 5px;
+        padding: 4px 0;
+        width: 60px;
+        display: flex;
+        justify-content: center;
+        color: #ffffff;
+        font-weight: 600;
+      }
+      &-title {
+        margin-top: 10px;
+        font-weight: 700;
+        font-size: 18px;
+      }
+      &-desc {
+        margin-top: 7px;
+        font-weight: 500;
+        font-size: 18px;
+
+      }
+    }
+  }
+}
+
+// Стили для секции "Форма отправки"
+
+.s-form {
+  margin-top: 170px;
+  &-wrapper {
+    padding: 140px 0 70px ;
+    background: linear-gradient(to right, rgba(230, 235, 240, 1) 0%, rgba(240, 243, 245, 1) 100%);
+
+    border-radius: 20px;
+    width: 100%;
+  }
+  &-title {
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  &-desc {
+    width: 600px;
+
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    margin: 20px auto 0;
+  }
+  &-container {
+    margin: 100px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 550px;
+
+    label {
+      font-size: 14px;
+    }
+    &-group {
+      span {
+        font-size: 18px;
+        font-weight: 700;
+      }
+    }
+    input[type="text"], input[type="tel"], input[type="email"] {
+      border: 1px solid rgba(212, 212, 212, 0.6);
+      border-radius: 5px;
+      background: transparent;
+      height: 50px;
+      width: 100%;
+      font-size: 20px;
+      padding: 0 8px;
+    }
+    &-radios {
+      margin-top: 10px;
+      display: flex;
+      gap: 30px;
+      label {
+        font-size: 16px;
+      }
+      div {
+        display: flex;
+        align-items: center;
+        gap: 3px;
+      }
+    }
+    &-check {
+      margin-top: 10px;
+      display: flex;
+      gap: 3px;
+      align-items: center;
+      label {
+        font-size: 16px;
+      }
+    }
+  }
+  &-submit {
+    width: 256px;
+    height: 60px;
+    margin: 70px auto;
+  }
+}
+
+
+// Стили для "подвала" сайта
+
+.footer {
+  padding: 70px 0;
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  &-cred {
+
+  }
+  &-links {
+    display: flex;
+    gap: 20px;
+  }
+  &-politicy {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
